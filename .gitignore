@@ -2,6 +2,7 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 
-# large datasets (DO NOT PUSH)
+# Large datasets
 data/processed/*.csv
 data/raw/*.xlsx
+
