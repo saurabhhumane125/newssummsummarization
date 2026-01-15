@@ -1,38 +1,75 @@
-cat << 'EOF' >> README.md
+# Multi-Document News Summarization (Indian English)
 
-## Overview
-This repository contains the implementation and evaluation of multi-document abstractive summarization models (BART, PEGASUS, and LED) trained and evaluated on Indian English news articles.
+This repository contains the implementation, experiments, and evaluation results
+for a multi-document abstractive news summarization project focused on
+Indian English news articles.
 
-## Models
-- BART (baseline encoder-decoder transformer)
-- PEGASUS (pretrained with gap-sentence objective)
-- LED (Longformer Encoder-Decoder for long multi-document inputs)
+We benchmark and analyze three transformer-based models on long,
+multi-document inputs:
 
-## Dataset Access
+- **BART**
+- **PEGASUS**
+- **LED (Longformer Encoder-Decoder)**
 
-Due to GitHub file size limitations, the full NewsSumm dataset is not hosted in this repository.
+---
 
-📂 Dataset download link:
-[Google Drive / Kaggle / Zenodo link]
+## Repository Structure
 
-The repository includes:
-- Sample data for structure reference
-- Preprocessing scripts
-- Training and evaluation notebooks
-
-This setup follows standard reproducibility practices used in large-scale NLP research.
+newssummsummarization/
+├── notebooks/ # Training, inference, and evaluation notebooks
+├── results/ # ROUGE scores and generated summaries
+├── .gitignore # Excludes large datasets
+└── README.md
 
 
-## Experiments
-- Training notebooks available in `notebooks/`
-- Inference outputs and ROUGE scores available in `results/`
+---
 
-## Evaluation
-- ROUGE-1, ROUGE-2, ROUGE-L computed on 25-document subset
-- LED shows stronger structural and legal-context preservation
+## Models Used
 
-## Reproducibility
-All experiments were conducted in Google Colab (Tesla T4 GPU).
-Exact hyperparameters and training details are documented in notebooks.
+- **BART**  
+  Encoder–decoder transformer used as a strong baseline for abstractive summarization.
 
-EOF
+- **PEGASUS**  
+  Pretrained using gap-sentence generation, designed specifically for summarization tasks.
+
+- **LED (Longformer Encoder-Decoder)**  
+  Supports long-sequence inputs using sparse attention, making it suitable for
+  multi-document summarization.
+
+---
+
+## Dataset
+
+The dataset used in this project consists of Indian English news articles and
+their corresponding human-written summaries.
+
+📦 **Public Dataset Download (Google Drive):**  
+**PASTE_DRIVE_LINK_HERE**
+
+---
+
+## Dataset Setup (IMPORTANT)
+
+After downloading the dataset from Google Drive:
+
+1. Extract the folder.
+2. Place it in the project root directory with the following structure:
+
+data/
+├── raw/ # Original dataset files
+├── processed/ # Preprocessed CSV files
+
+
+⚠️ The `data/` directory is intentionally excluded from GitHub due to file size
+limitations and must exist **locally** for the notebooks to run.
+
+---
+
+## Reproducibility Instructions
+
+Follow these steps to reproduce the experiments:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/saurabhhumane125/newssummsummarization.git
+   cd newssummsummarization
