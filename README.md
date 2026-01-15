@@ -8,9 +8,20 @@ This repository contains the implementation and evaluation of multi-document abs
 - PEGASUS (pretrained with gap-sentence objective)
 - LED (Longformer Encoder-Decoder for long multi-document inputs)
 
-## Dataset
-- Custom multi-document Indian English news dataset
-- Sample data provided in `data/sample/`
+## Dataset Access
+
+Due to GitHub file size limitations, the full NewsSumm dataset is not hosted in this repository.
+
+📂 Dataset download link:
+[Google Drive / Kaggle / Zenodo link]
+
+The repository includes:
+- Sample data for structure reference
+- Preprocessing scripts
+- Training and evaluation notebooks
+
+This setup follows standard reproducibility practices used in large-scale NLP research.
+
 
 ## Experiments
 - Training notebooks available in `notebooks/`
