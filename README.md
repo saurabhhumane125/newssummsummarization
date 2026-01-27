@@ -44,11 +44,11 @@ The dataset used in this project consists of Indian English news articles and
 their corresponding human-written summaries.
 
 📦 **Public Dataset Download (Google Drive):**  
-**PASTE_DRIVE_LINK_HERE**
+(https://docs.google.com/spreadsheets/d/1vNH37MiHf3c_74VR0PVFglVRakiD89fUr-4ifHewrPQ/edit?usp=sharing)
 
 ---
 
-## Dataset Setup (IMPORTANT)
+## Dataset Setup 
 
 After downloading the dataset from Google Drive:
 
